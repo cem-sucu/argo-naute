@@ -8,10 +8,12 @@ function App() {
     const [memberList, setMemberList] = useState([]);
 
     useEffect(() => {
-        Axios.get("https://argo-naute.herokuapp.com/api/get").then((response) => {
-            console.log(response.data);
-            setMemberList(response.data);
-        });
+        Axios.get("https://argo-naute.herokuapp.com/api/get").then(
+            (response) => {
+                console.log(response.data);
+                setMemberList(response.data);
+            }
+        );
     }, []);
 
     const submitMember = () => {
@@ -23,7 +25,7 @@ function App() {
     };
 
     const deleteMember = (memb) => {
-        Axios.delete(`https://argo-naute.herokuapp.com//api/delete/${memb}`);
+        Axios.delete(`https://argo-naute.herokuapp.com/api/delete/${memb}`);
         window.location.reload(false);
     };
 
@@ -64,16 +66,23 @@ function App() {
                             <tr>
                                 {memberList.map((val, i) => {
                                     return (
-                                        <th key={i}>
-                                            {val.members}
+                                        <>
+                                            <th>Eleftheria</th>
+                                            <th>Gennadios</th>
+                                            <th>Lysimachos</th>
+                                            <th key={i}>
+                                                {val.members}
 
-                                            <TiDelete
-                                                className="deleteButton"
-                                                onClick={() => {
-                                                    deleteMember(val.members);
-                                                }}
-                                            />
-                                        </th>
+                                                <TiDelete
+                                                    className="deleteButton"
+                                                    onClick={() => {
+                                                        deleteMember(
+                                                            val.members
+                                                        );
+                                                    }}
+                                                />
+                                            </th>
+                                        </>
                                     );
                                 })}
                             </tr>
