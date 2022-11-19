@@ -3,6 +3,10 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-image: url(./ship.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 main {
@@ -11,9 +15,10 @@ main {
 }
 
 header {
-  background: #f4f4f4;
+  background: #f4f4f444;
   text-align: center;
   padding: 2em;
+  box-shadow: rgba(0, 0, 0, 0.1)0px -23px 25px 0px inset, #f76c6c 0px 20px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 header img {
@@ -28,14 +33,48 @@ footer {
   background: "",
 }
 
-h1,
-h2 {
-  text-align: center;
+h1 {
+  font-weight: bold;
+}
+
+h2,
+label {
+  background-color: #f76c6c;
+  inline-size: fit-content;
+  display: table;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+h2,
+label {
+  color: #fff;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 label {
   display: block;
   margin-bottom: 0.5em;
+}
+
+input {
+  width: 21rem;
+  height: 3rem;
+  font-size: large;
+}
+
+button {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 3rem;
+  height: 6rem;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #f76c6c;
+  font-weight: bold;
 }
 
 .new-member-form {
@@ -87,6 +126,9 @@ footer {
   margin-top: 5.7em;
   text-align: center;
   color: #fff;
-  background: #f76c6c;
+  font-weight: bold;
   padding: 0.25em 0;
+  background: #f4f4f43b;
+  box-shadow: #f76c6c 0px -13px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
 }
