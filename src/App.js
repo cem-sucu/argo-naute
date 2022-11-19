@@ -66,23 +66,16 @@ function App() {
                             <tr>
                                 {memberList.map((val, i) => {
                                     return (
-                                        <>
-                                            <th>Eleftheria</th>
-                                            <th>Gennadios</th>
-                                            <th>Lysimachos</th>
-                                            <th key={i}>
-                                                {val.members}
+                                        <th key={i}>
+                                            {val.members}
 
-                                                <TiDelete
-                                                    className="deleteButton"
-                                                    onClick={() => {
-                                                        deleteMember(
-                                                            val.members
-                                                        );
-                                                    }}
-                                                />
-                                            </th>
-                                        </>
+                                            <TiDelete
+                                                className="deleteButton"
+                                                onClick={() => {
+                                                    deleteMember(val.members);
+                                                }}
+                                            />
+                                        </th>
                                     );
                                 })}
                             </tr>
